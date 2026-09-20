@@ -1,0 +1,74 @@
+[
+  {
+    "title": "CaT-GS: Efficient 3DGS Rendering for Large-Scale Scenes with Inter-frame Caching and Tile Scheduling",
+    "year": 2026,
+    "venue": "CVPR",
+    "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Zhang_CaT-GS_Efficient_3DGS_Rendering_for_Large-Scale_Scenes_with_Inter-frame_Caching_CVPR_2026_paper.html",
+    "verification": "官方主会论文集",
+    "source": "https://openaccess.thecvf.com/CVPR2026?day=all",
+    "pdf": "https://openaccess.thecvf.com/content/CVPR2026/papers/Zhang_CaT-GS_Efficient_3DGS_Rendering_for_Large-Scale_Scenes_with_Inter-frame_Caching_CVPR_2026_paper.pdf",
+    "category": "渲染加速候选",
+    "first_seen": "2026-09-20T21:15:37+08:00",
+    "last_seen": "2026-09-20T21:15:37+08:00"
+  },
+  {
+    "title": "Seele: A Unified Acceleration Framework for Real-Time Gaussian Splatting on Mobile Devices",
+    "year": 2026,
+    "venue": "CVPR",
+    "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Zhu_Seele_A_Unified_Acceleration_Framework_for_Real-Time_Gaussian_Splatting_on_CVPR_2026_paper.html",
+    "verification": "官方主会论文集",
+    "source": "https://openaccess.thecvf.com/CVPR2026?day=all",
+    "pdf": "https://openaccess.thecvf.com/content/CVPR2026/papers/Zhu_Seele_A_Unified_Acceleration_Framework_for_Real-Time_Gaussian_Splatting_on_CVPR_2026_paper.pdf",
+    "category": "渲染加速候选",
+    "first_seen": "2026-09-20T21:13:01+08:00",
+    "last_seen": "2026-09-20T21:15:37+08:00"
+  },
+  {
+    "title": "Prune Wisely, Reconstruct Sharply: Compact 3D Gaussian Splatting via Adaptive Pruning and Difference-of-Gaussian Primitives",
+    "year": 2026,
+    "venue": "CVPR",
+    "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Wang_Prune_Wisely_Reconstruct_Sharply_Compact_3D_Gaussian_Splatting_via_Adaptive_CVPR_2026_paper.html",
+    "verification": "官方主会论文集",
+    "source": "https://openaccess.thecvf.com/CVPR2026?day=all",
+    "pdf": "https://openaccess.thecvf.com/content/CVPR2026/papers/Wang_Prune_Wisely_Reconstruct_Sharply_Compact_3D_Gaussian_Splatting_via_Adaptive_CVPR_2026_paper.pdf",
+    "category": "压缩/效率（需复核渲染收益）",
+    "first_seen": "2026-09-20T21:13:01+08:00",
+    "last_seen": "2026-09-20T21:15:37+08:00"
+  },
+  {
+    "title": "Faster-GS: Analyzing and Improving Gaussian Splatting Optimization",
+    "year": 2026,
+    "venue": "CVPR",
+    "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Hahlbohm_Faster-GS_Analyzing_and_Improving_Gaussian_Splatting_Optimization_CVPR_2026_paper.html",
+    "verification": "官方主会论文集",
+    "source": "https://openaccess.thecvf.com/CVPR2026?day=all",
+    "pdf": "https://openaccess.thecvf.com/content/CVPR2026/papers/Hahlbohm_Faster-GS_Analyzing_and_Improving_Gaussian_Splatting_Optimization_CVPR_2026_paper.pdf",
+    "category": "压缩/效率（需复核渲染收益）",
+    "first_seen": "2026-09-20T21:13:01+08:00",
+    "last_seen": "2026-09-20T21:15:37+08:00"
+  },
+  {
+    "title": "FastGS: Training 3D Gaussian Splatting in 100 Seconds",
+    "year": 2026,
+    "venue": "CVPR",
+    "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Ren_FastGS_Training_3D_Gaussian_Splatting_in_100_Seconds_CVPR_2026_paper.html",
+    "verification": "官方主会论文集",
+    "source": "https://openaccess.thecvf.com/CVPR2026?day=all",
+    "pdf": "https://openaccess.thecvf.com/content/CVPR2026/papers/Ren_FastGS_Training_3D_Gaussian_Splatting_in_100_Seconds_CVPR_2026_paper.pdf",
+    "category": "训练/重建加速（相关方向）",
+    "first_seen": "2026-09-20T21:13:01+08:00",
+    "last_seen": "2026-09-20T21:15:37+08:00"
+  },
+  {
+    "title": "EcoSplat: Efficiency-controllable Feed-forward 3D Gaussian Splatting from Multi-view Images",
+    "year": 2026,
+    "venue": "CVPR",
+    "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Bui_EcoSplat_Efficiency-controllable_Feed-forward_3D_Gaussian_Splatting_from_Multi-view_Images_CVPR_2026_paper.html",
+    "verification": "官方主会论文集",
+    "source": "https://openaccess.thecvf.com/CVPR2026?day=all",
+    "pdf": "https://openaccess.thecvf.com/content/CVPR2026/papers/Bui_EcoSplat_Efficiency-controllable_Feed-forward_3D_Gaussian_Splatting_from_Multi-view_Images_CVPR_2026_paper.pdf",
+    "category": "训练/重建加速（相关方向）",
+    "first_seen": "2026-09-20T21:13:01+08:00",
+    "last_seen": "2026-09-20T21:15:37+08:00"
+  }
+]

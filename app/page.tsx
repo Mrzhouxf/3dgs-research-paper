@@ -1,0 +1,11 @@
+'use client';
+import {useEffect,useState} from 'react';
+import {Input} from '@/components/ui/input';
+import {Button} from '@/components/ui/button';
+type Paper={title:string;venue:string;year:number;url:string;category:string;first_seen:string};
+export default function Home(){
+const [papers,setPapers]=useState<Paper[]>([]),[query,setQuery]=useState(''),[venue,setVenue]=useState('全部'),[status,setStatus]=useState('正在读取论文库…');
+useEffect(()=>{fetch('/api/papers').then(r=>{if(!r.ok)throw Error();return r.json()}).then(d=>{setPapers(d.papers);setStatus(d.message)}).catch(()=>setStatus('暂时无法读取论文库，请稍后刷新。'))},[]);
+const result=papers.filter(p=>(venue==='全部'||p.venue===venue)&&p.title.toLowerCase().includes(query.toLowerCase()));
+return <main><header><strong>GS / OBSERVATORY</strong><span>3D Gaussian Splatting · Research radar</span></header><section className="intro"><small>论文观察站 / RENDERING SYSTEMS</small><h1>更快的渲染，<br/>值得追踪的研究。</h1><p>聚焦 3DGS 渲染加速。回到正式论文集，区分渲染、训练与压缩。</p></section><section><div className="toolbar"><Input aria-label="搜索论文标题" placeholder="搜索论文标题、方法名称…" value={query} onChange={e=>setQuery(e.target.value)}/><span>{result.length} 篇论文</span></div><nav>{['全部','CVPR','ICCV','ECCV','SIGGRAPH','SIGGRAPH Asia'].map(v=><Button key={v} variant={venue===v?'default':'outline'} onClick={()=>setVenue(v)}>{v}</Button>)}</nav><p className="status" role="status">{status}</p>{result.map((p,i)=><article key={p.url}><span>{String(i+1).padStart(2,'0')}</span><div><small>{p.venue} {p.year} / {p.category}</small><h2><a href={p.url} target="_blank" rel="noreferrer">{p.title} ↗</a></h2><p>首次收录 {p.first_seen.slice(0,10)} · 正式论文记录</p></div></article>)}{!result.length&&<p className="empty">暂无匹配论文。可以调整关键词或会议筛选。</p>}</section><footer>仅跟踪指定主会论文 · 方向标签为规则筛选候选，阅读原文确认实际渲染收益。</footer></main>
+}

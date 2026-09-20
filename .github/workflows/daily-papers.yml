@@ -1,0 +1,32 @@
+name: Daily 3DGS papers
+on:
+  schedule:
+    - cron: '17 1 * * *'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: daily-papers
+  cancel-in-progress: false
+jobs:
+  crawl:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Crawl official proceedings
+        id: crawl
+        continue-on-error: true
+        run: python scripts/tracker.py
+      - name: Upload results to website
+        env:
+          SITE_URL: ${{ vars.SITE_URL }}
+          INGEST_TOKEN: ${{ secrets.INGEST_TOKEN }}
+          SITES_ACCESS_TOKEN: ${{ secrets.SITES_ACCESS_TOKEN }}
+        run: python scripts/upload.py
+      - name: Report incomplete sources
+        if: steps.crawl.outcome == 'failure'
+        run: echo 'Some sources failed; available results uploaded. See crawl logs.'; exit 1
