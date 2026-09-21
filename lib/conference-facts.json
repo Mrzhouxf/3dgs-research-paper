@@ -1,0 +1,360 @@
+{
+  "checkedAt": "2026-09-21",
+  "defaultYear": 2025,
+  "editions": [
+    {
+      "venue": "CVPR",
+      "year": 2023,
+      "deadline": {
+        "full": "2022-11-11T23:59:00-08:00",
+        "abstract": "2022-11-04T23:59:00-07:00",
+        "zone": "全文 PST UTC−8；注册 PDT UTC−7",
+        "source": "https://cvpr.thecvf.com/Conferences/2023/Dates"
+      },
+      "accepted": {
+        "count": 2359,
+        "source": "https://cvpr.thecvf.com/media/cvpr-2023/Slides/23313.pdf",
+        "note": "官方主会录用总数"
+      }
+    },
+    {
+      "venue": "CVPR",
+      "year": 2024,
+      "deadline": {
+        "full": "2023-11-18T07:59:00Z",
+        "abstract": "2023-11-04T06:59:00Z",
+        "zone": "UTC（官网时间表）",
+        "source": "https://cvpr.thecvf.com/Conferences/2024/Dates"
+      },
+      "accepted": {
+        "count": 2719,
+        "source": "https://cvpr.thecvf.com/media/cvpr-2024/Slides/32147.pdf",
+        "note": "官方主会录用总数"
+      }
+    },
+    {
+      "venue": "CVPR",
+      "year": 2025,
+      "deadline": {
+        "full": "2024-11-15T07:59:00Z",
+        "abstract": "2024-11-08T07:59:00Z",
+        "zone": "UTC（官网时间表）",
+        "source": "https://cvpr.thecvf.com/Conferences/2025/Dates"
+      },
+      "accepted": {
+        "count": 2872,
+        "source": "https://cvpr.thecvf.com/Conferences/2025/News/Wrap",
+        "note": "官方会后总结：2,872 篇录用并展示论文。"
+      }
+    },
+    {
+      "venue": "CVPR",
+      "year": 2026,
+      "deadline": {
+        "full": "2025-11-13T23:59:00-12:00",
+        "abstract": "2025-11-07T23:59:00-12:00",
+        "zone": "AoE / UTC−12",
+        "source": "https://cvpr.thecvf.com/Conferences/2026/CallForPapers"
+      },
+      "acceptedNote": "官方新闻稿为 4,089 篇展示；最终程序册为 4,072 篇录用。口径不一致，暂不计算。",
+      "acceptedSource": "https://cvpr.thecvf.com/Conferences/2026/News/Technical_Program"
+    },
+    {
+      "venue": "CVPR",
+      "year": 2027,
+      "deadline": {
+        "full": "2026-11-16T23:59:00-12:00",
+        "abstract": "2026-11-10T23:59:00-12:00",
+        "zone": "AoE / UTC−12",
+        "source": "https://cvpr.thecvf.com/Conferences/2027/CallForPapers"
+      }
+    },
+    {
+      "venue": "ICCV",
+      "year": 2025,
+      "deadline": {
+        "full": "2025-03-07T23:59:00-10:00",
+        "abstract": "2025-03-03T23:59:00-10:00",
+        "zone": "HST / UTC−10",
+        "source": "https://iccv.thecvf.com/Conferences/2025/CallForPapers"
+      }
+    },
+    {
+      "venue": "ECCV",
+      "year": 2024,
+      "deadline": {
+        "full": "2024-03-07T21:00:00Z",
+        "abstract": "2024-02-29T21:00:00Z",
+        "zone": "UTC（官网时间表）",
+        "source": "https://eccv.ecva.net/Conferences/2024/Dates"
+      }
+    },
+    {
+      "venue": "ECCV",
+      "year": 2026,
+      "deadline": {
+        "full": "2026-03-05T23:00:00+01:00",
+        "abstract": "2026-02-26T23:00:00+01:00",
+        "zone": "CET / UTC+1",
+        "source": "https://eccv.ecva.net/Conferences/2026/CallForPapers"
+      }
+    },
+    {
+      "venue": "SIGGRAPH",
+      "year": 2025,
+      "deadline": {
+        "full": "2025-01-23T22:00:00Z",
+        "abstract": "2025-01-16T22:00:00Z",
+        "zone": "UTC / GMT",
+        "source": "https://s2025.siggraph.org/program/technical-papers/",
+        "note": "全文或 MD5 截止；次日同一时刻仅可补传匹配 MD5 的文件。"
+      }
+    },
+    {
+      "venue": "SIGGRAPH",
+      "year": 2026,
+      "deadline": {
+        "full": "2026-01-22T22:00:00Z",
+        "abstract": "2026-01-15T22:00:00Z",
+        "zone": "UTC / GMT",
+        "source": "https://s2026.siggraph.org/program/technical-papers/",
+        "note": "全文或 MD5 截止；次日同一时刻仅可补传匹配 MD5 的文件。"
+      }
+    },
+    {
+      "venue": "SIGGRAPH Asia",
+      "year": 2025,
+      "deadline": {
+        "full": "2025-05-23T23:59:00-12:00",
+        "abstract": "2025-05-16T23:59:00-12:00",
+        "zone": "AoE / UTC−12",
+        "source": "https://asia.siggraph.org/2025/submissions/technical-papers/",
+        "note": "全文或 MD5 截止；次日同一时刻仅可补传匹配 MD5 的文件。"
+      }
+    },
+    {
+      "venue": "SIGGRAPH Asia",
+      "year": 2026,
+      "deadline": {
+        "full": "2026-05-12T23:59:00-12:00",
+        "abstract": "2026-05-05T23:59:00-12:00",
+        "zone": "AoE / UTC−12",
+        "source": "https://asia.siggraph.org/2026/submissions/technical-papers/",
+        "note": "全文或 MD5 截止；次日同一时刻仅可补传匹配 MD5 的文件。"
+      }
+    },
+    {
+      "venue": "NeurIPS",
+      "year": 2024,
+      "deadline": {
+        "full": "2024-05-22T20:00:00Z",
+        "abstract": "2024-05-15T20:00:00Z",
+        "zone": "UTC（官网时间表）",
+        "source": "https://neurips.cc/Conferences/2024/Dates"
+      }
+    },
+    {
+      "venue": "NeurIPS",
+      "year": 2025,
+      "deadline": {
+        "full": "2025-05-15T23:59:00-12:00",
+        "abstract": "2025-05-11T23:59:00-12:00",
+        "zone": "AoE / UTC−12",
+        "source": "https://neurips.cc/Conferences/2025/Dates"
+      },
+      "accepted": {
+        "count": 5290,
+        "source": "https://blog.neurips.cc/2025/09/30/reflections-on-the-2025-review-process-from-the-program-committee-chairs/",
+        "note": "主会 Main Track，不含 Datasets & Benchmarks、Position 等独立赛道。"
+      }
+    },
+    {
+      "venue": "NeurIPS",
+      "year": 2026,
+      "deadline": {
+        "full": "2026-05-06T23:59:00-12:00",
+        "abstract": "2026-05-04T23:59:00-12:00",
+        "zone": "AoE / UTC−12",
+        "source": "https://neurips.cc/Conferences/2026/Dates"
+      }
+    },
+    {
+      "venue": "ICML",
+      "year": 2023,
+      "deadline": {
+        "full": "2023-01-26T19:59:00Z",
+        "abstract": null,
+        "zone": "UTC（官网时间表）",
+        "source": "https://icml.cc/Conferences/2023/Dates"
+      }
+    },
+    {
+      "venue": "ICML",
+      "year": 2024,
+      "deadline": {
+        "full": "2024-02-01T23:59:00-12:00",
+        "abstract": null,
+        "zone": "AoE / UTC−12",
+        "source": "https://icml.cc/Conferences/2024/Dates"
+      },
+      "acceptedNote": "官方 Fact Sheet 只写 Over 2600，未给精确值，不使用约数作分母。",
+      "acceptedSource": "https://media.icml.cc/Conferences/ICML2024/ICML2024_Fact_Sheet.pdf"
+    },
+    {
+      "venue": "ICML",
+      "year": 2025,
+      "deadline": {
+        "full": "2025-01-30T23:59:00-12:00",
+        "abstract": "2025-01-23T23:59:00-12:00",
+        "zone": "AoE / UTC−12",
+        "source": "https://icml.cc/Conferences/2025/Dates"
+      },
+      "accepted": {
+        "count": 3260,
+        "source": "https://media.icml.cc/Conferences/ICML2025/ICML2025_Fact_Sheet.pdf",
+        "note": "Main Track；不含 Position Papers。"
+      }
+    },
+    {
+      "venue": "ICML",
+      "year": 2026,
+      "deadline": {
+        "full": "2026-01-29T12:00:00Z",
+        "abstract": "2026-01-24T12:00:00Z",
+        "zone": "官方明确换算为 12:00 UTC",
+        "source": "https://icml.cc/Conferences/2026/CallForPapers"
+      }
+    },
+    {
+      "venue": "ICLR",
+      "year": 2023,
+      "deadline": {
+        "full": "2022-09-28T23:59:00-12:00",
+        "abstract": "2022-09-21T23:59:00-12:00",
+        "zone": "AoE / UTC−12",
+        "source": "https://iclr.cc/Conferences/2023/Dates"
+      }
+    },
+    {
+      "venue": "ICLR",
+      "year": 2024,
+      "deadline": {
+        "full": "2023-09-28T23:59:00-12:00",
+        "abstract": "2023-09-23T23:59:00-12:00",
+        "zone": "AoE / UTC−12",
+        "source": "https://iclr.cc/Conferences/2024/Dates"
+      },
+      "accepted": {
+        "count": 2260,
+        "source": "https://media.iclr.cc/Conferences/ICLR2024/ICLR2024-Fact_Sheet.pdf",
+        "note": "官方主会录用总数"
+      }
+    },
+    {
+      "venue": "ICLR",
+      "year": 2025,
+      "deadline": {
+        "full": "2024-10-01T23:59:00-12:00",
+        "abstract": "2024-09-27T23:59:00-12:00",
+        "zone": "AoE / UTC−12",
+        "source": "https://iclr.cc/Conferences/2025/Dates"
+      },
+      "accepted": {
+        "count": 3704,
+        "source": "https://media.iclr.cc/Conferences/ICLR2025/ICLR2025_Fact_Sheet.pdf",
+        "note": "官方主会录用总数"
+      }
+    },
+    {
+      "venue": "ICLR",
+      "year": 2026,
+      "deadline": {
+        "full": "2025-09-24T23:59:00-12:00",
+        "abstract": "2025-09-19T23:59:00-12:00",
+        "zone": "AoE / UTC−12",
+        "source": "https://iclr.cc/Conferences/2026/Dates"
+      },
+      "accepted": {
+        "count": 5357,
+        "source": "https://media.iclr.cc/Conferences/ICLR2026/ICLR2026_Fact_Sheet.pdf",
+        "note": "官方主会录用总数"
+      }
+    },
+    {
+      "venue": "ICLR",
+      "year": 2027,
+      "deadline": {
+        "full": "2026-09-25T23:59:00-12:00",
+        "abstract": "2026-09-18T23:59:00-12:00",
+        "zone": "AoE / UTC−12",
+        "source": "https://iclr.cc/Conferences/2027/AuthorGuidelines"
+      }
+    },
+    {
+      "venue": "AAAI",
+      "year": 2025,
+      "deadline": {
+        "full": "2024-08-15T23:59:00-12:00",
+        "abstract": "2024-08-07T23:59:00-12:00",
+        "zone": "AoE / UTC−12",
+        "source": "https://aaai.org/conference/aaai/aaai-25/submission-instructions/"
+      }
+    },
+    {
+      "venue": "AAAI",
+      "year": 2026,
+      "deadline": {
+        "full": "2025-08-01T23:59:00-12:00",
+        "abstract": "2025-07-25T23:59:00-12:00",
+        "zone": "AoE / UTC−12",
+        "source": "https://aaai.org/conference/aaai/aaai-26/"
+      }
+    },
+    {
+      "venue": "AAAI",
+      "year": 2027,
+      "deadline": {
+        "full": "2026-07-28T23:59:00-12:00",
+        "abstract": "2026-07-21T23:59:00-12:00",
+        "zone": "AoE / UTC−12",
+        "source": "https://aaai.org/conference/aaai/aaai-27/submission-instructions/"
+      }
+    },
+    {
+      "venue": "IJCAI",
+      "year": 2025,
+      "deadline": {
+        "full": "2025-01-23T23:59:00-12:00",
+        "abstract": "2025-01-16T23:59:00-12:00",
+        "zone": "AoE / UTC−12",
+        "source": "https://2025.ijcai.org/call-for-papers-main-track/"
+      }
+    },
+    {
+      "venue": "IJCAI",
+      "year": 2026,
+      "deadline": {
+        "full": "2026-01-19T23:59:00-12:00",
+        "abstract": "2026-01-12T23:59:00-12:00",
+        "zone": "AoE / UTC−12",
+        "source": "https://2026.ijcai.org/important-dates/"
+      }
+    },
+    {
+      "venue": "ACM MM",
+      "year": 2025,
+      "deadline": {
+        "full": "2025-04-11T23:59:00-12:00",
+        "abstract": "2025-04-04T23:59:00-12:00",
+        "zone": "AoE / UTC−12",
+        "source": "https://acmmm2025.org/important-dates/"
+      }
+    },
+    {
+      "venue": "ACM MM",
+      "year": 2026,
+      "deadlineNote": "官方日期页列出全文 2026-04-01、注册 2026-03-25，但该页未明示时区，暂不换算。",
+      "deadlineSource": "https://2026.acmmm.org/site/important-dates.html"
+    }
+  ]
+}

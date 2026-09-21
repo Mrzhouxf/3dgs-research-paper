@@ -1,5 +1,13 @@
 # GS Observatory
 
+## 会议统计与截稿时间
+
+年份筛选联动全部 11 个会议的统计。百分比为本站去重后的“渲染加速候选”数量除以同届已核实主会录用总数，不代表完整研究主题占比或会议录用率。来源异常、统计口径不一致、分母未核实时不计算比例；期刊论文不混入会议分子。
+
+`lib/conference-facts.json` 保存带来源的人工核实录用数和截稿日期。论文数量随云端每日抓取更新，但这些会议元数据不是自动核验数据。页面显示核验日期、所选年份及下一届时间；全文与摘要截止分开，以 `Asia/Shanghai`（UTC+8）转换，未确认原时区则不换算。全部年份模式默认显示 2025 年统计。
+
+验证：`node --test scripts/test-conference-metrics.mjs`（Node 24）、`npx tsc --noEmit`、`npm run build`。
+
 ## 扩展收录范围
 
 AI 主会：NeurIPS、ICML、ICLR、AAAI、IJCAI、ACM MM；保留原 CVPR、ICCV、ECCV、SIGGRAPH / Asia。
