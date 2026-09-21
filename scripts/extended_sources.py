@@ -69,6 +69,10 @@ def neurips(client, since):
     for year in years:
         source = f'https://papers.nips.cc/paper_files/paper/{year}'
         links = Links(); links.feed(client.get(source))
+        main_links = [(u,t) for u,t in links.items if 'main-conference' in u]
+        for href, _ in main_links:
+            extra = Links(); extra.feed(client.get(urllib.parse.urljoin(source, href)))
+            links.items.extend(extra.items)
         for href, title in links.items:
             if gaussian(title) and '/hash/' in href and ('Abstract-Conference' in href or '-Abstract.html' in href):
                 yield record(title, 'NeurIPS', year, urllib.parse.urljoin(source, href), source, 'NeurIPS 正式主会论文集')
