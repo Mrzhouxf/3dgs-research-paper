@@ -40,7 +40,7 @@ def category(title, abstract=''):
     # A generic real-time rendering claim alone is not evidence of acceleration.
     if not gaussian(title + ' ' + abstract):
         return None
-    if re.search(r'2D Gaussian|image compression|image representations|pose alignment|motion reasoning|head avatar', title, re.I):
+    if re.search(r'2D Gaussian|image compression|image representations|pose alignment|motion reasoning|head avatar|belief propagation|\bSLAM\b|active mapping|registration|human representation', title, re.I):
         return None
     evidence = title
     accelerated = re.search(r'accelerat|speedup|speed.up|faster|efficient|efficiency|fast|hardware|mobile|prun|compress|rasteriz|rasteris|roofline', evidence, re.I)
@@ -125,6 +125,28 @@ def dblp(client):
             if offset >= int(hits.get('@total', 0)):
                 break
 
+def graphics(client):
+    try:
+        yield from dblp(client)
+        return
+    except Exception as error:
+        print('DBLP unavailable; trying Crossref proceedings:', str(error), flush=True)
+    url = 'https://api.crossref.org/works?' + urllib.parse.urlencode({
+        'query': 'Gaussian splatting', 'filter': 'type:proceedings-article,from-pub-date:2023-01-01', 'rows': 1000})
+    records = json.loads(client.get(url))['message']['items']
+    for item in records:
+        container = ' '.join(item.get('container-title', []))
+        if not re.search(r'SIGGRAPH', container, re.I) or re.search(r'workshop|posters|abstracts|courses|talks|emerging|real.time live', container, re.I):
+            continue
+        if not re.search(r'technical papers|conference papers', container, re.I):
+            continue
+        title = plain(' '.join(item.get('title', [])))
+        if gaussian(title):
+            yield {'title': title, 'year': item.get('published', item['issued'])['date-parts'][0][0],
+                   'venue': 'SIGGRAPH Asia' if re.search(r'Asia', container, re.I) else 'SIGGRAPH',
+                   'url': 'https://doi.org/' + item['DOI'], 'source': url,
+                   'verification': 'Crossref 出版商会议论文元数据', 'abstract': plain(item.get('abstract', '')), 'pdf': ''}
+
 def identity(p):
     return hashlib.sha256(re.sub(r'\W+', '', p['title'].casefold()).encode()).hexdigest()
 
@@ -174,7 +196,7 @@ def run(args):
             sources.append((f'ICCV {y}', lambda y=y: official(client, f'https://openaccess.thecvf.com/ICCV{y}?day=all', 'ICCV', y)))
     if not args.cvf_only:
         sources += [('ECCV', lambda: official(client, 'https://www.ecva.net/papers.php', 'ECCV')),
-                    ('SIGGRAPH / SIGGRAPH Asia', lambda: dblp(client))]
+                    ('SIGGRAPH / SIGGRAPH Asia', lambda: graphics(client))]
     for label, source in sources:
         print('Checking', label, flush=True)
         try:

@@ -36,3 +36,7 @@ next-env.d.ts
 /.wrangler/
 /outputs/
 /work/
+*.tsbuildinfo
+/scripts/data/
+/scripts/论文列表.md
+__pycache__/

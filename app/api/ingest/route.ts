@@ -7,7 +7,7 @@ export async function POST(request:Request){
  if(raw.length>2000000)return new Response('Payload too large',{status:413});
  let data;
  try{data=JSON.parse(raw)}catch{return new Response('Invalid JSON',{status:400})}
- if(!Array.isArray(data.papers)||!data.papers.length||data.papers.some((p:any)=>!p.title||!['CVPR','ICCV','ECCV','SIGGRAPH','SIGGRAPH Asia'].includes(p.venue)||!/^https:\/\/(openaccess\.thecvf\.com|www\.ecva\.net|dblp\.org)\//.test(p.url)||!Number.isInteger(p.year)))return new Response('Invalid paper records',{status:400});
+ if(!Array.isArray(data.papers)||!data.papers.length||data.papers.some((p:any)=>!p||typeof p.title!=='string'||typeof p.category!=='string'||typeof p.first_seen!=='string'||!['CVPR','ICCV','ECCV','SIGGRAPH','SIGGRAPH Asia'].includes(p.venue)||!/^https:\/\/(openaccess\.thecvf\.com|www\.ecva\.net|dblp\.org|doi\.org)\//.test(p.url)||!Number.isInteger(p.year)))return new Response('Invalid paper records',{status:400});
  const db=await database();
  const previous=await db.prepare('SELECT payload FROM snapshots WHERE id=?').bind('latest').first<{payload:string}>();
  if(previous){const old=JSON.parse(previous.payload);const merged=new Map((old.papers||[]).map((p:any)=>[p.url,p]));for(const p of data.papers){const prior:any=merged.get(p.url);merged.set(p.url,{...p,first_seen:prior?.first_seen||p.first_seen});}data.papers=Array.from(merged.values());}
