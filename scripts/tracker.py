@@ -34,7 +34,7 @@ def plain(s):
     return ' '.join(html.unescape(re.sub('<[^>]+>', ' ', s)).split())
 
 def gaussian(title):
-    return bool(re.search(r'gaussian|\b3dgs\b|\bsplat\w*', title, re.I))
+    return bool(re.search(r'\b3dgs\b|\bsplat\w*|3d gaussian|gaussian.*(?:render|radiance|raster)', title, re.I))
 
 def category(title, abstract=''):
     # A generic real-time rendering claim alone is not evidence of acceleration.
@@ -195,8 +195,10 @@ def run(args):
         if y % 2:
             sources.append((f'ICCV {y}', lambda y=y: official(client, f'https://openaccess.thecvf.com/ICCV{y}?day=all', 'ICCV', y)))
     if not args.cvf_only:
+        from extended_sources import sources as extended_sources
         sources += [('ECCV', lambda: official(client, 'https://www.ecva.net/papers.php', 'ECCV')),
                     ('SIGGRAPH / SIGGRAPH Asia', lambda: graphics(client))]
+        sources += extended_sources(client, args.since)
     for label, source in sources:
         print('Checking', label, flush=True)
         try:
@@ -213,6 +215,7 @@ def run(args):
                 p['category'] = category(p['title'], p.get('abstract', ''))
                 status['checked'] += 1
                 if p['category']:
+                    p.setdefault('publication_type', 'conference')
                     status['new'] += int(save(db, p, now))
                     print('  ' + p['title'], flush=True)
                     export(db, status)

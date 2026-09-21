@@ -1,5 +1,12 @@
 # GS Observatory
 
+## 扩展收录范围
+
+AI 主会：NeurIPS、ICML、ICLR、AAAI、IJCAI、ACM MM；保留原 CVPR、ICCV、ECCV、SIGGRAPH / Asia。
+期刊：TPAMI、IJCV、TOG、TVCG、TIP、JMLR、Artificial Intelligence。白名单为领域精选，不声称统一分级。
+NeurIPS 和 ICML 使用正式论文集；ICLR 从 2024 年起使用官方 OpenReview 已录用 venueid 与录用状态双校验；期刊使用 Crossref ISSN 和完整刊名双校验。Crossref 收录可能滞后或缺失，不能保证全覆盖。Workshop、未录用投稿、预印本不混入主列表。
+页面新增出版类型和期刊筛选，保持每天北京时间 09:17 云端更新。原文链接及来源核验说明随条目展示。
+
 在线网站：https://gs-rendering-observatory.gyvideo.chatgpt.site
 
 GitHub Actions 每天北京时间 09:17 在云端检索，去重后提交给网站的 D1 数据库；无需本机开机，没有本地定时任务。GitHub 调度可能延迟，公开仓库长期无活动也可能被平台暂停定时运行，运行记录请查看 Actions。

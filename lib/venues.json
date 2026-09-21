@@ -1,0 +1,5 @@
+{
+  "conference": ["CVPR", "ICCV", "ECCV", "SIGGRAPH", "SIGGRAPH Asia", "NeurIPS", "ICML", "ICLR", "AAAI", "IJCAI", "ACM MM"],
+  "journal": ["TPAMI", "IJCV", "TOG", "TVCG", "TIP", "JMLR", "Artificial Intelligence"],
+  "policy": "精选 AI、视觉与图形学主会和高水平期刊白名单，不代表统一排名。仅正式发表或官方已录用记录；排除 workshop、预印本与撤稿。"
+}

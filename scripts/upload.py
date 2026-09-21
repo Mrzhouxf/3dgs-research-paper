@@ -9,7 +9,7 @@ data = json.loads((root / 'data' / 'papers.json').read_text(encoding='utf-8'))
 url = os.environ['SITE_URL'].rstrip('/')
 if urlparse(url).scheme != 'https' or not os.environ.get('INGEST_TOKEN'):
     raise SystemExit('Configure HTTPS SITE_URL and INGEST_TOKEN in GitHub settings')
-payload = {'papers': data['papers'], 'errors': data['status']['errors']}
+payload = {'papers': data['papers'], 'errors': data['status']['errors'], 'sources_ok': data['status']['sources_ok']}
 headers = {'Content-Type': 'application/json', 'Authorization': 'Bearer ' + os.environ['INGEST_TOKEN']}
 if os.environ.get('SITES_ACCESS_TOKEN'):
     headers['OAI-Sites-Authorization'] = 'Bearer ' + os.environ['SITES_ACCESS_TOKEN']
